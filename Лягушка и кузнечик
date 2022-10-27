@@ -1,0 +1,47 @@
+def bigger(frog, grass, time):
+    while frog < grass:
+        frog += 3
+        grass -= 2
+        time += 1
+        if frog == grass:
+            return time
+    return(-1)
+
+def average(frog, grass, time):
+    while frog < grass:
+        frog += 3
+        grass -= 1
+        time += 1
+        if frog == grass:
+            return time
+    return(-1)
+
+def med(frog, grass, time):
+    while frog < grass:
+        frog += 2
+        grass -= 2
+        time += 1
+        if frog == grass:
+            return time
+    return(-1)
+
+def smaller(frog, grass, time):
+    while frog < grass:
+        frog += 2
+        grass -= 1
+        time += 1
+        if frog == grass:
+            return time
+    return(-1)
+
+for i in range (2, 2*109):
+    if bigger(1, i, 0) != (-1):
+        print(bigger(1, i, 0))
+    elif average(1, i, 0) != (-1):
+        print(average(1, i, 0))
+    elif med(1, i, 0) != (-1):
+        print(med(1, i, 0))
+    elif smaller(1, i, 0) != (-1):
+        print(smaller(1, i, 0))
+    else:
+        print(-1)
